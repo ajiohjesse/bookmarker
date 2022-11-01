@@ -1,0 +1,48 @@
+.previewCard {
+  background-color: rgba(0, 0, 0, 0.418);
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--violet);
+}
+
+
+
+.title {
+  font-size: 1rem;
+  color: var(--blue);
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tags > button {
+  background-color: transparent;
+  color: var(--violet);
+  font-size: 12px;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons > button {
+  background-color: transparent;
+  color: var(--violet);
+  transition: var(--transition);
+}
+
+.icons > button:active {
+  transform: scale(0.7);
+}

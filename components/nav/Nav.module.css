@@ -1,0 +1,19 @@
+.logo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: var(--github-gray-7);
+}
+
+.logo > h1 {
+  font-size: 1.4rem;
+  color: var(--github-gray-1);
+  display: flex;
+  gap: 2px;
+}
+
+.logo > h1 > span {
+  color: var(--violet);
+}

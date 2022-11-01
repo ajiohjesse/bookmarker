@@ -1,0 +1,329 @@
+/*----------------------------*\
+  #global.css
+
+  Copyright 2022. Jesse Ajioh.
+
+  ajiohjesse@gmail.com
+\*----------------------------*/
+
+:root {
+  /*--------------*\
+    - COLORS
+  \*--------------*/
+
+  /**** MONOCHROME ****/
+
+  --white: #fff;
+  --black: #000;
+
+  --grey-1: #fbfcfc;
+  --grey-2: #f7f8f9;
+  --grey-3: #f0f3f5;
+  --grey-4: #e8ecef;
+  --grey-5: #dfe5e9;
+  --grey-6: #d6dde3;
+  --grey-7: #b6bcc1;
+  --grey-8: #94999d;
+  --grey-9: #767a7d;
+  --grey-10: #545659;
+
+  --navy-1: #efeff2;
+  --navy-2: #dadbe0;
+  --navy-3: #bbbdc7;
+  --navy-4: #9699a9;
+  --navy-5: #6c7087;
+  --navy-6: #3f4462;
+  --navy-7: #363a53;
+  --navy-8: #2c2f44;
+  --navy-9: #232536;
+  --navy-10: #191b26;
+
+  /**** GITHUB COLORS ****/
+
+  --github-black: #010409;
+  --github-white: #ffffff;
+
+  --github-gray-0: #f0f6fc;
+  --github-gray-1: #c9d1d9;
+  --github-gray-2: #b1bac4;
+  --github-gray-3: #8b949e;
+  --github-gray-4: #6e7681;
+  --github-gray-5: #484f58;
+  --github-gray-6: #30363d;
+  --github-gray-7: #21262d;
+  --github-gray-8: #161b22;
+  --github-gray-9: #0d1117;
+
+  --github-blue-0: #cae8ff;
+  --github-blue-1: #a5d6ff;
+  --github-blue-2: #79c0ff;
+  --github-blue-3: #58a6ff;
+  --github-blue-4: #388bfd;
+  --github-blue-5: #1f6feb;
+  --github-blue-6: #1158c7;
+  --github-blue-7: #0d419d;
+  --github-blue-8: #0c2d6b;
+  --github-blue-9: #051d4d;
+
+  --github-green-0: #caffcd;
+  --github-green-1: #a5ffcd;
+  --github-green-2: #79ffcd;
+  --github-green-3: #58ffcd;
+  --github-green-4: #2df3c2;
+  --github-green-5: #14cfa7;
+  --github-green-6: #0fbe98;
+  --github-green-7: #099b7e;
+  --github-green-8: #036d58;
+  --github-green-9: #013d31;
+
+  --github-yellow-0: #f8e3a1;
+  --github-yellow-1: #f2cc60;
+  --github-yellow-2: #e3b341;
+  --github-yellow-3: #d29922;
+  --github-yellow-4: #bb8009;
+  --github-yellow-5: #9e6a03;
+  --github-yellow-6: #845306;
+  --github-yellow-7: #693e00;
+  --github-yellow-8: #4b2900;
+  --github-yellow-9: #341a00;
+
+  --github-purple-0: #eddeff;
+  --github-purple-1: #e2c5ff;
+  --github-purple-2: #d2a8ff;
+  --github-purple-3: #bc8cff;
+  --github-purple-4: #a371f7;
+  --github-purple-5: #8957e5;
+  --github-purple-6: #6e40c9;
+  --github-purple-7: #553098;
+  --github-purple-8: #3c1e70;
+  --github-purple-9: #271052;
+
+  --github-pink-0: #ffdaec;
+  --github-pink-1: #ffbedd;
+  --github-pink-2: #ff9bce;
+  --github-pink-3: #f778ba;
+  --github-pink-4: #db61a2;
+  --github-pink-5: #bf4b8a;
+  --github-pink-6: #9e3670;
+  --github-pink-7: #7d2457;
+  --github-pink-8: #5e103e;
+  --github-pink-9: #42062a;
+
+  --github-coral-0: #ffddd2;
+  --github-coral-1: #ffc2b2;
+  --github-coral-2: #ffa28b;
+  --github-coral-3: #f78166;
+  --github-coral-4: #ea6045;
+  --github-coral-5: #cf462d;
+  --github-coral-6: #ac3220;
+  --github-coral-7: #872012;
+  --github-coral-8: #640d04;
+  --github-coral-9: #460701;
+
+  /**** ACCENTS ****/
+
+  --blue: #5fa8ff;
+  --blue-100: #e0eeff;
+  --blue-200: #c6e0ff;
+
+  --orange: #fe7301;
+  --orange-100: #fee4ce;
+  --orange-200: #fecda5;
+
+  --red: #ff4d28;
+  --red-100: #ffdcd5;
+  --red-200: #ffc0b3;
+
+  --green: #25cc57;
+  --green-100: #d7f3df;
+  --green-200: #b7e9c6;
+
+  --violet: #6858ff;
+  --violet-100: #e2dfff;
+  --violet-200: #c2bdf6;
+
+  /**** GENERAL COLORS ****/
+
+  --cultured: hsl(225, 20%, 96%);
+  --silver: hsl(0, 0%, 47%);
+  --oynx: hsl(207, 8%, 21%);
+  --space-cadet: hsl(220, 41%, 20%);
+  --eerie-black: hsl(214, 10%, 13%);
+
+  --cool-grey: hsla(225, 11%, 59%);
+  --cool-grey-12: hsla(225, 11%, 59%, 0.12);
+
+  --davys-grey: hsla(210, 9%, 31%);
+  --davys-grey-12: hsla(210, 9%, 31%, 0.12);
+
+  --imperial-red: hsla(357, 86%, 57%);
+  --imperial-red-12: hsla(357, 86%, 57%, 0.12);
+
+  --coral: hsla(15, 100%, 65%);
+  --coral-12: hsla(15, 100%, 65%, 0.12);
+
+  --pacific-blue: hsla(188, 78%, 41%);
+  --pacific-blue-12: hsla(188, 78%, 41%, 0.12);
+
+  --emerald: hsla(144, 62%, 53%);
+  --emerald-12: hsla(144, 62%, 53%, 0.12);
+
+  /*--------------*\
+    - TYPOGRAPHY
+  \*--------------*/
+
+  /* Root font size */
+  --rfs-8: 0.5rem;
+  --rfs-10: 0.625rem;
+  --rfs-12: 0.75rem;
+  --rfs-14: 0.875rem;
+  --rfs-16: 1rem;
+  --rfs-18: 1.125rem;
+  --rfs-20: 1.25rem;
+  --rfs-22: 1.375rem;
+  --rfs-24: 1.5rem;
+  --rfs-26: 1.625rem;
+  --rfs-28: 1.74rem;
+  --rfs-30: 1.875rem;
+  --rfs-34: 2.125rem;
+  --rfs-38: 2.375rem;
+  --rfs-42: 2.625rem;
+
+  /* relative font siz */
+  --fs-8: 0.5em;
+  --fs-10: 0.625em;
+  --fs-12: 0.75em;
+  --fs-14: 0.875em;
+  --fs-16: 1em;
+  --fs-18: 1.125em;
+  --fs-20: 1.25em;
+  --fs-22: 1.375em;
+  --fs-24: 1.5em;
+  --fs-26: 1.625em;
+  --fs-28: 1.74em;
+  --fs-30: 1.875em;
+  --fs-34: 2.125em;
+  --fs-38: 2.375em;
+  --fs-42: 2.625em;
+
+  /*--------------*\
+    - TRANSITION
+  \*--------------*/
+
+  --transition: all 0.25s ease;
+  --cubic-in: cubic-bezier(0.5, 0.85, 0.5, 1);
+  --cubic-out: cubic-bezier(0.45, 0, 0.5, 0.95);
+
+  /*--------------*\
+    - SHADOW
+  \*--------------*/
+
+  --shadow-1: 0 12px 20px hsla(210, 10%, 23%, 0.07);
+  --shadow-2: 0 2px 10px hsla(0, 0%, 0%, 0.04);
+
+  /*-----------------*\
+    - BORDER RADIUS
+  \*-----------------*/
+
+  --radius-1: 4px;
+  --radius-2: 6px;
+  --radius-3: 8px;
+  --radius-4: 10px;
+  --radius-5: 20px;
+}
+
+/*--------------*\
+    - RESET
+\*--------------*/
+
+button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+
+/**** Courtsey of Josh Comeau via
+***** https://www.joshwcomeau.com/css/custom-css-reset 
+****/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+     and decoration
+*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--github-gray-9);
+  color: var(--github-gray-3);
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  display: block;
+  max-width: 100%;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}

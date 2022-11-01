@@ -1,0 +1,106 @@
+.home {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+.form {
+  background-color: var(--github-gray-9);
+  color: var(--github-gray-3);
+  padding: 20px;
+  display: grid;
+  gap: 1rem;
+}
+
+.view {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view > a {
+  color: var(--github-gray-3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+
+.view > a:hover {
+  color: var(--github-blue-6);
+}
+
+.inputGroup {
+  display: grid;
+  gap: 5px;
+}
+
+.inputGroup > label {
+  font-weight: 500;
+}
+
+.form textarea,
+.form input {
+  background-color: var(--github-gray-8);
+  border: none;
+  outline: none;
+  font: inherit;
+  color: var(--github-gray-0);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.815);
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form textarea:focus,
+.form input:focus {
+  border-color: var(--github-blue-6);
+}
+
+.form > button {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--github-blue-6);
+  color: var(--github-gray-0);
+  transition: all 0.25s ease;
+}
+
+.form > button:active {
+  transform: scale(0.95);
+}
+
+/* 
+* BOOKMARK PAGE
+*/
+
+.card {
+  width: 400px;
+  background-color: var(--github-gray-9);
+  min-height: 200px;
+  padding: 2rem;
+}
+
+.bookmarkList {
+  margin-top: 1rem;
+}
+
+.bookmarkList > ul > li {
+  list-style: numeric;
+  color: var(--github-gray-3);
+}
+
+.bookmarkList > ul > li > a {
+  color: var(--github-gray-3);
+  transition: var(--transition);
+}
+
+.bookmarkList > ul > li > a:hover {
+  color: var(--github-blue-6);
+}
