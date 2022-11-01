@@ -1,0 +1,38 @@
+.welcome {
+  background-color: var(--github-black);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.952)),
+    url("../public/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  /* height: 200px; */
+  padding-block: 4rem;
+  display: grid;
+  place-items: center;
+}
+
+.text {
+  display: grid;
+  gap: 1rem;
+}
+
+.text > h2 {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  text-shadow: 0 2px 5px#000;
+}
+
+.text > p {
+  color: #fff;
+  /* text-shadow: 0 2px 5px #000; */
+}
+
+.text > p > span {
+  color: var(--blue-200);
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .text > h2 {
+    font-size: 3.5rem;
+  }
+}

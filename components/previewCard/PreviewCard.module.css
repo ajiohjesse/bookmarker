@@ -4,14 +4,12 @@
   border-radius: 10px;
   display: grid;
   gap: 1rem;
-  border: 1px solid var(--violet);
+  border: 1px solid var(--navy-9);
 }
-
-
 
 .title {
   font-size: 1rem;
-  color: var(--blue);
+  color: var(--github-grey-2);
 }
 
 .tags {
@@ -22,7 +20,7 @@
 
 .tags > button {
   background-color: transparent;
-  color: var(--violet);
+  color: var(--imperial-red);
   font-size: 12px;
 }
 
@@ -43,6 +41,9 @@
   transition: var(--transition);
 }
 
+.icons > button:hover {
+  transform: scale(1.2);
+}
 .icons > button:active {
   transform: scale(0.7);
 }

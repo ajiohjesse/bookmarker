@@ -1,0 +1,80 @@
+.form {
+  background-color: var(--github-gray-9);
+  color: var(--github-gray-3);
+  padding-block: 20px;
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+}
+
+.view {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view > a {
+  color: var(--github-gray-3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+
+.view > a:hover {
+  color: var(--github-blue-6);
+}
+
+.inputGroup {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.inputGroup > label {
+  font-weight: 500;
+}
+
+.form textarea,
+.form input {
+  width: 100%;
+  background-color: var(--github-gray-9);
+  border: none;
+  outline: none;
+  font: inherit;
+  color: var(--github-gray-0);
+  padding: 0.5rem 1rem;
+  /* border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.815);
+  border: 1px solid transparent; */
+  border-bottom: 1px solid var(--github-gray-7);
+  transition: all 0.25s ease;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form textarea:focus,
+.form input:focus {
+  border-color: var(--github-blue-6);
+}
+
+.form > button {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--github-blue-6);
+  color: var(--github-gray-0);
+  transition: all 0.25s ease;
+}
+
+.form > button:active {
+  transform: scale(0.95);
+}
+
+.form > button:last-child {
+  background-color: var(--imperial-red);
+}

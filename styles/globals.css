@@ -261,7 +261,6 @@ button {
 * {
   margin: 0;
   padding: 0;
-  outline: none;
   list-style: none;
   text-decoration: none;
 }
@@ -326,4 +325,12 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 60px var(--github-gray-9) inset !important;
+  -webkit-text-fill-color: var(--github-gray-3);
 }

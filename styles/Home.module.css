@@ -1,106 +1,127 @@
 .home {
   width: 100%;
-  max-width: 500px;
   margin: 0 auto;
 }
 
-
-.form {
-  background-color: var(--github-gray-9);
-  color: var(--github-gray-3);
-  padding: 20px;
+.grid {
   display: grid;
+  width: 100%;
   gap: 1rem;
 }
 
-.view {
-  display: flex;
-  justify-content: flex-end;
+.heroImg {
+  position: relative;
+  width: 100%;
+  height: 200px;
 }
 
-.view > a {
-  color: var(--github-gray-3);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.25s ease;
-  font-size: 1rem;
+.img {
+  object-fit: cover;
 }
 
-.view > a:hover {
+.secondCol {
+  width: 100%;
+}
+
+.login {
+  padding-bottom: 3rem;
+}
+
+.login > h2 {
+  margin-bottom: 4rem;
   color: var(--github-blue-6);
 }
 
-.inputGroup {
+.login > form {
+  margin-top: 2rem;
   display: grid;
-  gap: 5px;
+  gap: 0.8rem;
 }
 
-.inputGroup > label {
+.login > form label {
   font-weight: 500;
 }
 
-.form textarea,
-.form input {
-  background-color: var(--github-gray-8);
-  border: none;
+.inputGroup > input,
+.passwordInput > input {
+  width: 100%;
+  height: 50px;
+  color: var(--github-gray-3);
+  background-color: transparent;
   outline: none;
-  font: inherit;
-  color: var(--github-gray-0);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.815);
-  border: 1px solid transparent;
-  transition: all 0.25s ease;
+  border: none;
+  border-bottom: 1px solid var(--github-gray-8);
+  transition: var(--transition);
 }
 
-.form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.form textarea:focus,
-.form input:focus {
+.inputGroup > input:focus,
+.passwordInput > input:focus {
   border-color: var(--github-blue-6);
 }
 
-.form > button {
-  padding: 1rem;
-  border-radius: 4px;
+.passwordInput {
+  display: flex;
+  align-items: center;
+}
+
+.passwordVisibility {
+  padding: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.notice {
+  font-size: 12px;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+
+.login > form > button {
+  padding: 0.6rem;
   background-color: var(--github-blue-6);
-  color: var(--github-gray-0);
-  transition: all 0.25s ease;
+  color: var(--github-white);
+  border-radius: 4px;
+  transition: var(--transition);
 }
 
-.form > button:active {
-  transform: scale(0.95);
+.login > form > button:active {
+  transform: scale(0.9);
 }
 
-/* 
-* BOOKMARK PAGE
-*/
-
-.card {
-  width: 400px;
-  background-color: var(--github-gray-9);
-  min-height: 200px;
-  padding: 2rem;
+.links {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  width: max-content;
+  text-align: center;
 }
 
-.bookmarkList {
-  margin-top: 1rem;
-}
-
-.bookmarkList > ul > li {
-  list-style: numeric;
-  color: var(--github-gray-3);
-}
-
-.bookmarkList > ul > li > a {
+.links > a {
   color: var(--github-gray-3);
   transition: var(--transition);
 }
 
-.bookmarkList > ul > li > a:hover {
-  color: var(--github-blue-6);
+.links > a:hover {
+  color: var(--github-blue-5);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 60px);
+    place-items: center;
+  }
+
+  .heroImg {
+    position: relative;
+    width: 100%;
+    height: inherit;
+  }
+
+  .login {
+    padding-bottom: 0;
+  }
 }

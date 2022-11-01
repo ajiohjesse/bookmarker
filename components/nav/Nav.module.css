@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
-  background-color: var(--github-gray-7);
+  background-color: var(--github-black);
 }
 
 .logo > h1 {
@@ -12,6 +12,7 @@
   color: var(--github-gray-1);
   display: flex;
   gap: 2px;
+  cursor: pointer;
 }
 
 .logo > h1 > span {

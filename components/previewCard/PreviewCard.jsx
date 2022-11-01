@@ -1,4 +1,5 @@
 import styles from './PreviewCard.module.css'
+import Router from 'next/router'
 
 const PreviewCard = () => {
   return (
@@ -14,7 +15,23 @@ const PreviewCard = () => {
         quam animi harum? Id magni ratione consectetur unde necessitatibus.
       </p>
       <div className={styles.icons}>
-        <button>
+        <button onClick={() => Router.push(`/dashboard/edit/id`)} title="Edit">
+          <svg
+            stroke="currentColor"
+            fill="none"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
+        </button>
+        <button title="Copy">
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -27,7 +44,7 @@ const PreviewCard = () => {
             <path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
           </svg>
         </button>
-        <button>
+        <button title="Share">
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -40,7 +57,7 @@ const PreviewCard = () => {
             <path d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"></path>
           </svg>
         </button>
-        <button>
+        <button title="Visit">
           <svg
             stroke="currentColor"
             fill="currentColor"
