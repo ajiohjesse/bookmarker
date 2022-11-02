@@ -75,6 +75,6 @@
   transform: scale(0.95);
 }
 
-.form > button:last-child {
+.form > button[data-delete] {
   background-color: var(--imperial-red);
 }

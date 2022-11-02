@@ -5,6 +5,10 @@
   align-items: center;
   padding-left: 20px;
   background-color: var(--github-black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .logo > h1 {

@@ -1,28 +1,28 @@
 import styles from './PreviewCard.module.css'
 import Router from 'next/router'
 
-const PreviewCard = () => {
+const PreviewCard = ({ bookmark }) => {
   return (
     <div className={styles.previewCard}>
-      <h2 className={styles.title}>This is the title of the website</h2>
+      <h2 className={styles.title}>{bookmark.title}</h2>
       <div className={styles.tags}>
-        <button>design</button>
-        <button>colors</button>
-        <button>logo</button>
+        {bookmark.tags.map((tag, i) => (
+          <button key={i}>{tag}</button>
+        ))}
       </div>
-      <p className={styles.desc}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit illo
-        quam animi harum? Id magni ratione consectetur unde necessitatibus.
-      </p>
+      <p className={styles.desc}>{bookmark.desc}</p>
       <div className={styles.icons}>
-        <button onClick={() => Router.push(`/dashboard/edit/id`)} title="Edit">
+        <button
+          onClick={() => Router.push(`/dashboard/edit/${bookmark.id}`)}
+          title="Edit"
+        >
           <svg
             stroke="currentColor"
             fill="none"
             strokeWidth="2"
             viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             height="1em"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,10 @@ const PreviewCard = () => {
             <path d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"></path>
           </svg>
         </button>
-        <button title="Visit">
+        <button
+          title="Visit"
+          onClick={() => window.open(bookmark.url, '_ blank')}
+        >
           <svg
             stroke="currentColor"
             fill="currentColor"

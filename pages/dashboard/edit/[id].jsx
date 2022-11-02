@@ -41,7 +41,9 @@ const EditBookmark = () => {
           <input type="text" placeholder="design, colors, ui" />
         </div>
         <button type="submit">Save Bookmark</button>
-        <button type="submit">Delete Bookmark</button>
+        <button type="submit" data-delete>
+          Delete Bookmark
+        </button>
       </form>
     </Container>
   )
