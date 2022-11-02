@@ -6,6 +6,11 @@ import { AuthContext } from '../context/AuthContext'
 import { toast } from 'react-hot-toast'
 import Cookies from 'js-cookie'
 import Router from 'next/router'
+import { useContext, useState } from 'react'
+import { AuthContext } from '../context/AuthContext'
+import { toast } from 'react-hot-toast'
+import Cookies from 'js-cookie'
+import Router from 'next/router'
 import axios from 'axios'
 
 export default function Home() {
