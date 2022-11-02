@@ -8,7 +8,14 @@ const AuthLayout = ({ children }) => {
     <div className={styles.home}>
       <div className={styles.grid}>
         <div className={styles.heroImg}>
-          <Image src={bg} fill alt="bookmaker" className={styles.img} />
+          <Image
+            src={bg}
+            fill
+            sizes="(min-width: 768px) 50vw,
+              (max-width: 767px) 100vw"
+            alt="bookmaker"
+            className={styles.img}
+          />
         </div>
 
         <div className={styles.secondCol}>

@@ -1,4 +1,4 @@
-# Bookmaker
+# Bookmarker
 
 [Preview website](https://bookmarker.vercel.app)
 
