@@ -6,6 +6,8 @@ import { GET_USER_BOOKMARKS } from '../../graphql/queries/bookmarkQueries'
 import styles from '../../styles/Dashboard.module.css'
 
 const Dashboard = ({ bookmarks }) => {
+  if (!bookmarks) return <p>Error fetching bookmarks</p>
+
   return (
     <div className={styles.dashboard}>
       <Container>
@@ -26,14 +28,27 @@ const Dashboard = ({ bookmarks }) => {
 export default Dashboard
 
 export const getServerSideProps = async () => {
-  const res = await client.query({
-    query: GET_USER_BOOKMARKS,
-    variables: {
-      username: 'rehxofficial',
-    },
-  })
+  let res = null
 
-  const data = res.data.bookmarks
+  try {
+    await client
+      .query({
+        query: GET_USER_BOOKMARKS,
+        variables: {
+          username: 'rehxofficial',
+        },
+      })
+      .then(({ data }) => (res = data))
+      .catch(() => {
+        return null
+      })
+  } catch (error) {
+    return null
+  }
+
+  const data = res ? res.bookmarks : null
+
+  console.log(data)
 
   return {
     props: {

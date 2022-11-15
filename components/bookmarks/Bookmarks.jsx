@@ -6,8 +6,6 @@ import styles from './Bookmarks.module.css'
 const Bookmarks = ({ bookmarks }) => {
   const [selectedTag, setSelectedTag] = useState('all')
 
-  console.log(bookmarks)
-
   return (
     <div className={styles.section}>
       <div className={styles.container}>
