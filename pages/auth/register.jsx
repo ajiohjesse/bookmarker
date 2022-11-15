@@ -3,7 +3,7 @@ import { useState } from 'react'
 import AuthLayout from '../../Layouts/AuthLayout'
 import styles from '../../styles/Home.module.css'
 
-const register = () => {
+const Register = () => {
   const [passwordType, setPasswordType] = useState('password')
 
   return (
@@ -23,7 +23,7 @@ const register = () => {
             <label>Email</label>
             <input type="email" required />
             <p className={styles.notice}>
-              We'll only use this when recovering your password. No spam.
+              We&#39;ll only use this when recovering your password. No spam.
             </p>
           </div>
           <div className={styles.inputGroup}>
@@ -83,4 +83,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register
