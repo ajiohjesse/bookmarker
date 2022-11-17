@@ -37,5 +37,5 @@ export default async function handler(req, res) {
     .setExpirationTime('30d')
     .sign(new TextEncoder().encode(process.env.JWT))
 
-  res.json({ success: true, token, msg: null, user: data.account })
+  return res.json({ success: true, token, msg: null, user: data.account })
 }
