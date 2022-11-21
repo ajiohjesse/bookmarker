@@ -3,7 +3,7 @@ import * as jose from 'jose'
 import client from './apollo.config'
 import { GET_CURRENT_USER } from './graphql/queries/userQueries'
 
-export default async function middleware(request) {
+export default function middleware(request) {
   return NextResponse.redirect(new URL('/about-2', request.url))
 
   // const token = req.cookies.get('user')
