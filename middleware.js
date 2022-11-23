@@ -3,8 +3,8 @@ import * as jose from 'jose'
 import client from './apollo.config'
 import { GET_CURRENT_USER } from './graphql/queries/userQueries'
 
-export default function middleware(request) {
-  return NextResponse.redirect(new URL('/about-2', request.url))
+export function middleware(request) {
+  return NextResponse.redirect(new URL('/about-2', request.nextUrl))
 
   // const token = req.cookies.get('user')
   // const url = req.url
