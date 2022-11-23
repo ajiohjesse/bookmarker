@@ -7,22 +7,12 @@ import { toast } from 'react-hot-toast'
 import Cookies from 'js-cookie'
 import Router from 'next/router'
 import axios from 'axios'
-import useLogin from '../../hooks/useLogin'
-import { useLazyQuery } from '@apollo/client'
-import { GET_USER } from '../../graphql/queries/userQueries'
-import client from '../../apollo.config'
 
 export default function Login() {
   const [credentials, setCredentials] = useState({
     username: '',
     password: '',
   })
-
-  // const { data, loading, login } = useLogin(credentials)
-
-  // const [login, { data, loading, error }] = useLazyQuery(GET_USER, {
-  //   variables: { username: credentials.username },
-  // })
 
   const { dispatch } = useContext(AuthContext)
 
@@ -56,10 +46,10 @@ export default function Login() {
         toast.success('Logged in')
         Router.push('/dashboard')
       })
-      // .catch((err) => {
-      //   toast.dismiss(loadingToast)
-      //   console.log(JSON.stringify(err, null, 2))
-      // })
+      .catch((err) => {
+        toast.dismiss(loadingToast)
+        console.log(JSON.stringify(err, null, 2))
+      })
   }
 
   return (

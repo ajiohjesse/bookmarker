@@ -48,8 +48,6 @@ export const getServerSideProps = async () => {
 
   const data = res ? res.bookmarks : null
 
-  console.log(data)
-
   return {
     props: {
       bookmarks: data,
