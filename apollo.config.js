@@ -2,13 +2,23 @@ import { ApolloClient, InMemoryCache } from '@apollo/client'
 
 const cache = new InMemoryCache()
 
+const httpLink = createHttpLink({
+  uri: process.env.HYGRAPH_URI,
+})
+
+const authLink = setContext((_, { headers }) => {
+  return {
+    headers: {
+      ...headers,
+      authorization: process.env.HYGRAPH_BEARER_TOKEN,
+    },
+  }
+})
+
 const client = new ApolloClient({
   // Provide required constructor fields
   cache: cache,
-  uri: process.env.HYGRAPH_URI,
-  headers: {
-    authorization: process.env.HYGRAPH_BEARER_TOKEN,
-  },
+  link: authLink.concat(httpLink),
 
   // Provide some optional constructor fields
   name: 'react-web-client',
@@ -22,4 +32,3 @@ const client = new ApolloClient({
 })
 
 export default client
-
