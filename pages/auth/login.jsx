@@ -56,10 +56,10 @@ export default function Login() {
         toast.success('Logged in')
         Router.push('/dashboard')
       })
-      .catch((err) => {
-        toast.dismiss(loadingToast)
-        console.log(JSON.stringify(err, null, 2))
-      })
+      // .catch((err) => {
+      //   toast.dismiss(loadingToast)
+      //   console.log(JSON.stringify(err, null, 2))
+      // })
   }
 
   return (
