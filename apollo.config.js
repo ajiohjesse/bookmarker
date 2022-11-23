@@ -19,10 +19,7 @@ const authLink = setContext((_, { headers }) => {
 const client = new ApolloClient({
   // Provide required constructor fields
   cache: cache,
-  uri: process.env.HYGRAPH_URI,
-  headers: {
-    authorization: process.env.HYGRAPH_BEARER_TOKEN,
-  },
+  link: authLink.concat(httpLink),
 
   // Provide some optional constructor fields
   name: 'react-web-client',
@@ -36,5 +33,3 @@ const client = new ApolloClient({
 })
 
 export default client
-
-// link: authLink.concat(httpLink),
