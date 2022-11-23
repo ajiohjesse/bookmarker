@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import * as jose from 'jose'
-import client from './apollo.config'
+// import client from './apollo.config'
 import { GET_CURRENT_USER } from './graphql/queries/userQueries'
 
 export function middleware(request) {
