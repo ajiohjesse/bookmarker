@@ -22,7 +22,7 @@ export async function middleware(request) {
    * if not logged in.
    */
   if (!isLoggedIn && url.includes('/dashboard')) {
-    return NextResponse.redirect(new URL('/auth/login', req.nextUrl))
+    return NextResponse.redirect(new URL('/auth/login', request.nextUrl))
   }
 
   /**
@@ -31,6 +31,6 @@ export async function middleware(request) {
    */
 
   if (isLoggedIn && url.includes('/login')) {
-    return NextResponse.redirect(new URL('/dashboard', req.nextUrl))
+    return NextResponse.redirect(new URL('/dashboard', request.nextUrl))
   }
 }

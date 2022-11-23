@@ -2,7 +2,7 @@ import * as jose from 'jose'
 import client from '../../apollo.config'
 import { GET_USER } from '../../graphql/queries/userQueries'
 
-export default async function handler(req, res) {
+export default async function (req, res) {
   const { username, password } = req.body
 
   const { data } = await client.query({
