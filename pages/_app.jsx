@@ -5,6 +5,7 @@ import { ApolloProvider } from '@apollo/client'
 import { Toaster } from 'react-hot-toast'
 import client from '../apollo.config'
 import { AuthContextProvider } from '../context/AuthContext'
+import '../_customGlobals'
 
 function MyApp({ Component, pageProps }) {
   return (
